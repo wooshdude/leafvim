@@ -1,0 +1,27 @@
+call plug#begin('~/vim/plug')
+
+" tabnine
+Plug 'morhetz/gruvbox'
+Plug 'lifepillar/vim-gruvbox8'
+Plug 'vim-airline/vim-airline'
+Plug 'jszakmeister/vim-togglecursor'
+Plug 'jmcantrell/vim-virtualenv'
+Plug 'tpope/vim-commentary'
+Plug 'scrooloose/nerdtree'
+Plug 'ryanoasis/vim-devicons'
+"Plug 'sheerun/vim-polyglot'
+Plug 'vim-airline/vim-airline-themes'
+"Plug 'scrooloose/syntastic'
+Plug 'ervandew/supertab'
+Plug 'w0rp/ale'
+Plug 'nvie/vim-togglemouse'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-fugitive'
+Plug 'yggdroot/indentline'
+Plug 'kien/ctrlp.vim'
+Plug 'slim-template/vim-slim'
+Plug 'nvim-telescope/telescope.nvim'
+Plug 'dreadnaut/vim-bargreybars'
+Plug 'sheerun/vim-polyglot'
+
+call plug#end()
