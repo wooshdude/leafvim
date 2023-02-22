@@ -4,6 +4,7 @@ set nocompatible
 set list
 set number
 set laststatus=2
+set mouse=a
 
 set termguicolors
 let g:ale_virtualtext_cursor = 'none'
