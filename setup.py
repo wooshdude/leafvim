@@ -6,21 +6,23 @@ import os
 import sys
 from datetime import datetime
 
+logo ='''
+/////////////////////////////////////////////////////
+///   __                 _____       __           ///
+///  |  |   ____ _____ _/ ____\__  _|__| _____    ///
+///  |  |  / __ \\\__  \\\   __\\\  \/ /  |/     \   ///
+///  |  |_|  ___/ / __ \|  |   \   /|  |  Y Y  \  ///
+///  |____/\____  \____ |__|    \_/ |__|_/|_|\_/  ///
+///                  Installer                    ///
+///                                               ///
+/////////////////////////////////////////////////////
+'''
+
 os.system('clear')
 
 
 def main():
-    print('''
-    /////////////////////////////////////////////////////
-    ///   __                 _____       __           ///
-    ///  |  |   ____ _____ _/ ____\__  _|__| _____    ///
-    ///  |  |  / __ \\\__  \\\   __\\\  \/ /  |/     \   ///
-    ///  |  |_|  ___/ / __ \|  |   \   /|  |  Y Y  \  ///
-    ///  |____/\____  \____ |__|    \_/ |__|_/|_|\_/  ///
-    ///                  Installer                    ///
-    ///                                               ///
-    /////////////////////////////////////////////////////
-    ''')
+    print(logo)
     print()
     print('''
     Select option:
@@ -33,17 +35,41 @@ def main():
     print('')
 
     if choice == str('1'):
-        print(f'Copying config file...')
-        os.system('cp init.vim ~/.config/nvim/init.vim')
+        os.system('clear')
+        print(logo)
 
-        print(f'Copying plugins file...')
-        os.system('cp leaf.plug ~/.config/nvim/leaf.plug')
+        print('''
+        Select version:
+            [1] Vim
+            [2] NeoVim
+        ''')
 
-        print('Installing VimPlug plugins manager')
-        os.system('bash vimplug.sh')
+        ver = input(''':: ''')
 
-        print('')
-        print('LeafVim has finished setup. Start nvim and use the command :PlugInstall to finish plugin installation.')
+        if ver == '1':
+            print(f'Copying config file...')
+            os.system('cp init.vim ~/.vimrc')
+            print('Copied to ~/.vimrc')
+
+            print('Installing VimPlug plugins manager')
+            os.system('bash vimplug.sh')
+
+            print('')
+            print('LeafVim has finished setup. Start nvim and use the command :PlugInstall to finish plugin installation.')
+
+        if ver == '2':
+            print(f'Copying config file...')
+            os.system('cp init.vim ~/.config/nvim/init.vim')
+            print('Copied to ~/.config/nvim/init.vim')
+
+            print('Installing VimPlug plugins manager')
+            os.system('bash neovimplug.sh')
+
+            print('')
+            print('LeafVim has finished setup. Start nvim and use the command :PlugInstall to finish plugin installation.')
+
+
+
     elif choice == str('2'):
         check = input('Are you sure you want to uninstall LeafVim? This will revert NeoVim to a default installation. (y/N) ')
         if check == "y":

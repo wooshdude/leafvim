@@ -9,10 +9,31 @@ set termguicolors
 
 let g:ale_virtualtext_cursor = 'none' 
 
-" plugins
-if filereadable(expand("~/.vimrc.plug"))
-	source ~/.vimrc.plug
-endif
+call plug#begin()
+	" plugins
+	Plug 'morhetz/gruvbox'
+	Plug 'lifepillar/vim-gruvbox8'
+	Plug 'vim-airline/vim-airline'
+	Plug 'jszakmeister/vim-togglecursor'
+	Plug 'jmcantrell/vim-virtualenv'
+	Plug 'tpope/vim-commentary'
+	Plug 'scrooloose/nerdtree'
+	Plug 'ryanoasis/vim-devicons'
+	Plug 'sheerun/vim-polyglot'
+	Plug 'vim-airline/vim-airline-themes'
+	Plug 'ervandew/supertab'
+	Plug 'w0rp/ale'
+	Plug 'tpope/vim-surround'
+	Plug 'tpope/vim-fugitive'
+	Plug 'yggdroot/indentline'
+	Plug 'kien/ctrlp.vim'
+	Plug 'slim-template/vim-slim'
+	Plug 'stylelint/stylelint'
+	Plug 'bmatcuk/stylelint-lsp'
+	Plug 'jeffkreeftmeijer/vim-numbertoggle'
+	Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
+	Plug 'nlknguyen/copy-cut-paste.vim'
+call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 
@@ -39,8 +60,3 @@ nmap uo <Plug>CCP_CutLine
 vmap uo <Plug>CCP_CutText
 
 nmap up <Plug>CCP_PasteText
-
-" Lua code
-lua <<EOF
-
-EOF
