@@ -10,8 +10,8 @@ set termguicolors
 let g:ale_virtualtext_cursor = 'none'
 
 " plugins
-if filereadable(expand("~/.vimrc.plug"))
-	source ~/.vimrc.plug
+if filereadable(expand("leaf.plug"))
+	source leaf.plug
 endif
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
