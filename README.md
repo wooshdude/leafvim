@@ -7,9 +7,6 @@ Lightweight configurations to get you started.
 <a href="https://github.com/wooshdude/leafvim/pulse">
       <img alt="Last commit" src="https://img.shields.io/github/last-commit/lunarvim/LunarVim?style=for-the-badge&&color=fff6d5&&labelColor=abc837"/>
 </a>
-<a href="https://twitter.com/intent/follow?screen_name=wooshdude">
-      <img alt="follow on Twitter" src="https://img.shields.io/twitter/follow/wooshdude?style=social" />
-</a>
 
 ## Showcase
 ![example of editor](https://cdn.discordapp.com/attachments/1006744646887682138/1079648090002309240/leafvim_code.png)  
