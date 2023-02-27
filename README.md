@@ -8,6 +8,10 @@ Lightweight configurations to get you started.
       <img alt="Last commit" src="https://img.shields.io/github/last-commit/lunarvim/LunarVim?style=for-the-badge&&color=fff6d5&&labelColor=abc837"/>
 </a>
 
+<a href="https://twitter.com/intent/follow?screen_name=wooshdude">
+      <img alt="follow on Twitter" src="https://img.shields.io/twitter/follow/wooshdude?style=for-the-badge&logo=twitter&color=abc837&logoColor=abc837&labelColor=fff6d5" />
+    </a>
+
 ## Showcase
 ![example of editor](https://cdn.discordapp.com/attachments/1006744646887682138/1079648090002309240/leafvim_code.png)  
 
