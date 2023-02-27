@@ -19,3 +19,8 @@ Lightweight vim configurations to get you started.
 
 ## How to Install
 To get started with LeafVim, clone the repository or download the zip file in the latest release. Using python, run the `setup.py` file and follow the steps. 
+
+#### YouTube tutorial  
+<a href="https://youtu.be/-0iTsWGZxsI">
+      <img alt="youtube tutorial" src="https://img.shields.io/youtube/views/0iTsWGZxsI?color=fff6d5&logo=YouTube&logoColor=fff6d5&style=for-the-badge" />
+    </a>
