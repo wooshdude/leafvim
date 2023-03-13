@@ -1,5 +1,8 @@
 '''
-    Setup
+    LeafVim installer by wooshdude
+    https://github.com/wooshdude/leafvim
+
+    This file does not contain any Vim or NeoVim configs.
 '''
 
 import os
