@@ -21,6 +21,17 @@ logo ='''
 /////////////////////////////////////////////////////
 '''
 
+credits = '''
+Credits
+
+    Project Owner:
+        wooshdude
+
+    Main Contributor:
+        wooshdude
+
+'''
+
 os.system('clear')
 
 
@@ -71,8 +82,6 @@ def main():
             print('')
             print('LeafVim has finished setup. Start nvim and use the command :PlugInstall to finish plugin installation.')
 
-
-
     elif choice == str('2'):
         check = input('Are you sure you want to uninstall LeafVim? This will revert NeoVim to a default installation. (y/N) ')
         if check == "y":
@@ -85,7 +94,11 @@ def main():
             print('')
             print('Files removed from system.')
 
-
+    elif choice == str('3'):
+        print(credits)
+        input('Press ENTER to resume setup.')
+        os.system('clear')
+        main()
 
 if __name__ =='__main__':
     main()
