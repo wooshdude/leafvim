@@ -61,7 +61,7 @@ def main():
         ver = input(''':: ''')
 
         if ver == '1':
-            # Check if nvim folder exists. If not, create it.
+            # Check if .vimrc folder exists. If not, create it.
             path = os.path.expanduser("~/.vimrc")
             if not os.path.exists(path):
                 os.system('mkdir ~/.vimrc')
