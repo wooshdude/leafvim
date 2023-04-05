@@ -61,6 +61,12 @@ def main():
         ver = input(''':: ''')
 
         if ver == '1':
+            # Check if .vimrc folder exists. If not, create it.
+            path = os.path.expanduser("~/.vimrc")
+            if not os.path.exists(path):
+                os.system('mkdir ~/.vimrc')
+                print("Created ~/.vimrc directory")
+
             print(f'Copying config file...')
             os.system('cp init.vim ~/.vimrc')
             print('Copied to ~/.vimrc')
@@ -72,6 +78,12 @@ def main():
             print('LeafVim has finished setup. Start nvim and use the command :PlugInstall to finish plugin installation.')
 
         if ver == '2':
+            # Check if nvim folder exists. If not, create it.
+            path = os.path.expanduser("~/.config/nvim")
+            if not os.path.exists(path):
+                os.system('mkdir ~/.config/nvim')
+                print("Created ~/.config/nvim directory")
+
             print(f'Copying config file...')
             os.system('cp init.vim ~/.config/nvim/init.vim')
             print('Copied to ~/.config/nvim/init.vim')
