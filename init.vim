@@ -18,11 +18,9 @@ call plug#begin()
 	Plug 'jmcantrell/vim-virtualenv'
 	Plug 'tpope/vim-commentary'
 	Plug 'scrooloose/nerdtree'
+	Plug 'dense-analysis/ale'
 	Plug 'ryanoasis/vim-devicons'
-	Plug 'sheerun/vim-polyglot'
 	Plug 'vim-airline/vim-airline-themes'
-	Plug 'ervandew/supertab'
-	Plug 'w0rp/ale'
 	Plug 'tpope/vim-surround'
 	Plug 'tpope/vim-fugitive'
 	Plug 'yggdroot/indentline'
@@ -31,8 +29,9 @@ call plug#begin()
 	Plug 'stylelint/stylelint'
 	Plug 'bmatcuk/stylelint-lsp'
 	Plug 'jeffkreeftmeijer/vim-numbertoggle'
-	Plug 'codota/tabnine-nvim', { 'do': './dl_binaries.sh' }
 	Plug 'nlknguyen/copy-cut-paste.vim'
+	Plug 'davidhalter/jedi-vim'
+	Plug 'ervandew/supertab'
 call plug#end()
 
 let $NVIM_TUI_ENABLE_TRUE_COLOR=1
@@ -40,14 +39,28 @@ let $NVIM_TUI_ENABLE_TRUE_COLOR=1
 set termguicolors
 let g:bargreybars_auto = 0
 
+autocmd VimEnter * NERDTree | wincmd p
+nmap <C-n> :NERDTree<CR>
+nmap <C-t> :NERDTreeToggle<CR>
+nmap <C-f> :NERDTreeFind<CR>
+
+" Exit Vim if NERDTree is the only window remaining in the only tab.
+autocmd BufEnter * if tabpagenr('$') == 1 && winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Close the tab if NERDTree is the only window remaining in it.
+autocmd BufEnter * if winnr('$') == 1 && exists('b:NERDTree') && b:NERDTree.isTabTree() | quit | endif
+
+" Open the existing NERDTree on each new tab.
+autocmd BufWinEnter * if getcmdwintype() == '' | silent NERDTreeMirror | endif
+
 " 
 colorscheme gruvbox
 let g:gruvbox_termcolors=16
 
 
 " Tabe ustom keymaps
-nmap tn :tabn
-nmap tp :tabp
+nmap tn :tabn<CR>
+nmap tp :tabp<CR>
 
 
 " CCP custom keymaps
@@ -60,3 +73,20 @@ nmap uo <Plug>CCP_CutLine
 vmap uo <Plug>CCP_CutText
 
 nmap up <Plug>CCP_PasteText
+
+let g:SuperTabDefaultCompletionType = "<c-n>"
+
+if !exists('g:airline_symbols')
+  let g:airline_symbols = {}
+endif
+
+" powerline symbols
+let g:airline_left_sep = ''
+let g:airline_left_alt_sep = ''
+let g:airline_right_sep = ''
+let g:airline_right_alt_sep = ''
+let g:airline_symbols.branch = ''
+let g:airline_symbols.readonly = ''
+let g:airline_symbols.linenr = ' ☰ '
+let g:airline_symbols.maxlinenr = '  '
+let g:airline_symbols.dirty='⚡'
