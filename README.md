@@ -14,7 +14,7 @@ Lightweight vim configurations to get you started.
 
 ## Showcase
 ![example of editor without code](https://cdn.discordapp.com/attachments/1006744646887682138/1079664791003607050/leafvim_vim.png)
-![example of editorwith code](https://cdn.discordapp.com/attachments/1006744646887682138/1079648090002309240/leafvim_code.png)  
+![example of editorwith code]([https://cdn.discordapp.com/attachments/1006744646887682138/1079648090002309240/leafvim_code.png](https://cdn.discordapp.com/attachments/835742790368362509/1110552727790034944/Screenshot_2023-05-23_at_5.59.15_AM.png))  
 
 
 ## How to Install
