@@ -5,7 +5,7 @@ Lightweight vim configurations to get you started.
       <img alt="Latest release" src="https://img.shields.io/github/v/release/wooshdude/leafvim?style=for-the-badge&&color=fff6d5&&labelColor=abc837" />
 </a>
 <a href="https://github.com/wooshdude/leafvim/pulse">
-      <img alt="Last commit" src="https://img.shields.io/github/last-commit/lunarvim/LunarVim?style=for-the-badge&&color=fff6d5&&labelColor=abc837"/>
+      <img alt="Last commit" src="https://img.shields.io/github/last-commit/wooshdude/leafvim?style=for-the-badge&&color=fff6d5&&labelColor=abc837"/>
 </a>
 
 <a href="https://twitter.com/intent/follow?screen_name=wooshdude">
